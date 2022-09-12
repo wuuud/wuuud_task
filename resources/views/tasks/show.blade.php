@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>タスク詳細</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
     <h1>タスク詳細</h1>
@@ -19,7 +20,7 @@
     
     {{-- ②削除用 --}} 
     <div class="button-group">
-        <a href="/tasks">一覧へ戻る</a>
+        <button onclick="location.href='/tasks'">一覧へ戻る</button>
         <!-- $memoのidを元に編集ページへ遷移する -->
         <button onclick="location.href='/tasks/{{ $task->id }}/edit'">編集する</button>
         <form action="/tasks/{{ $task->id }}" method="post">

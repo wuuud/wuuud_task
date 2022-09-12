@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>memo edit</title>
+    <title>編集</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
-    <a href="/tasks/{{ $task->id }}">戻る</a>
-    <h1>更新</h1>
+   
+    <h1>投稿論文編集</h1>
     @if ($errors->any())
         <div class="error">
             <p>
@@ -27,23 +27,25 @@
 
     <!-- 更新先はmemosのidにしないと増える
     php artisan rote:listで確認① -->
-    <form action="/tasks/{{ $memo->id }}" method="post">
+    <form action="/tasks/{{ $task->id }}" method="post">
         @csrf
         @method('PATCH')
         <p>
-            <label for="title">タイトル</label>
+            <label for="title">論文タイトル</label>
             <br>
             <input type="text" name="title"
                     value="{{ old('title', $task->title) }}">
         </p>
         <p>
             <label for="body">本文</label><br>
-            <textarea name="body" class="body">
-                {{ old('body', $task->body) }}
-            </textarea>
+            <textarea name="body" class="bod">{{ old('body', $task->body) }}</textarea>
         </p>
 
-        <input type="submit" value="更新">
+        <div class="button-group">
+            <button onclick="location.href='/tasks'">更新</button>
+            <!-- $memoのidを元に編集ページへ遷移する -->
+            <button onclick="location.href='/tasks/{{ $task->id }}'">詳細に戻る</button>
+        </div>
     </form>
 </body>
 
