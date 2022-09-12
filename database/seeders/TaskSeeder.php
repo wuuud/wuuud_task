@@ -14,11 +14,10 @@ class TaskSeeder extends Seeder
      */
     public function run()
     {
-        
-        DB::table('tasks')->insert([
-        'title' => 'PHP',
-        'body'  => 'PHPは、Hypertext Preprocessorの略です。',
-        ]);
 
+        DB::table('tasks')->insert([
+            'title' => 'PHP',
+            'body'  => 'PHPは、Hypertext Preprocessorの略です。',
+        ]);
     }
 }

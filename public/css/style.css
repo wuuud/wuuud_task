@@ -5,16 +5,15 @@
     height: 100px;
 }
 
+
 .button-group {
     display: flex;
 }
 
-.register-group{
-    display: flex;
-}
+
 
 .test{
-    border-top: soild 5px;
+    border-top: 1px solid;
 }
 
 .button-group > *:not(:last-child) {

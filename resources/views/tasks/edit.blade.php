@@ -10,7 +10,7 @@
 </head>
 
 <body>
-   
+
     <h1>投稿論文編集</h1>
     @if ($errors->any())
         <div class="error">
