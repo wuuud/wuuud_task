@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TaskSeeder extends Seeder
 {
@@ -13,6 +14,12 @@ class TaskSeeder extends Seeder
      */
     public function run()
     {
-        //
+        foreach ($tasks as $task) {
+            $task = [
+                'title'=> $title,
+                'body' => $body,
+            ];
+        DB::table('tasks')->insert($task);
+
     }
 }
