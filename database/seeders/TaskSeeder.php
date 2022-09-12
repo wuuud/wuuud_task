@@ -14,12 +14,16 @@ class TaskSeeder extends Seeder
      */
     public function run()
     {
-        foreach ($tasks as $task) {
-            $task = [
-                'title'=> $title,
-                'body' => $body,
-            ];
-        DB::table('tasks')->insert($task);
+        // foreach ($tasks as $task) [
+        //         $title = 'title',
+        //         $body = '$body',
+        //     ];
+        // DB::table('tasks')->insert($task);
+        // 一件だけinsertする
+        DB::table('tasks')->insert([
+            'title' => 'テスト',
+            'body' => 'テスト用データです。',
+        ]);
 
     }
 }
