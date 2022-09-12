@@ -62,7 +62,7 @@
 
         {{-- <!-- 編集edit.balde.phpへジャンプする -->
         <button onclick="location.href='/tasks/{task}/edit'">Create Task</button> --}}
-        <input type="submit" value="Create Task">
+        <input type="submit" value="Create task">
     </form>
     </body>
 

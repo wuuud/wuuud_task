@@ -33,12 +33,11 @@
         <p>
             <label for="title">論文タイトル</label>
             <br>
-            <input type="text" name="title"
-                    value="{{ old('title', $task->title) }}">
+            <input type="text" name="title" value="{{ old('title', $task->title) }}">
         </p>
         <p>
             <label for="body">本文</label><br>
-            <textarea name="body" class="bod">{{ old('body', $task->body) }}</textarea>
+            <textarea name="body" class="body">{{ old('body', $task->body) }}</textarea>
         </p>
 
         <div class="button-group">
