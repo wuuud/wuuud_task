@@ -13,6 +13,10 @@
     display: flex;
 }
 
+.test{
+    border-top: soild 5px;
+}
+
 .button-group > *:not(:last-child) {
     margin-right: 10px;
 }
