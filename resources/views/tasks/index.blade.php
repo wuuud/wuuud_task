@@ -12,17 +12,17 @@
     <h1>タスク一覧</h1>
     p class="taskkline"
     <ul>
-        @foreach ($memos as $memo)
+        @foreach ($tasks as $task)
             <!-- // リンク先をidで取得し名前で出力 -->
             <li>
-                <a href="/memos/{{ $memo->id }}">
-                    {{ $memo->title }}
+                <a href="/tasks/{{ $task->id }}">
+                    {{ $task->title }}
                 </a>
         </li>
         @endforeach        
     </ul>
     <!-- 新規登録画面へジャンプする -->
-    <button onclick="location.href='/memos/create'">登録する</button>
+    <button onclick="location.href='/tasks/create'">登録する</button>
 
     <h1>新規論文投稿</h1>
 </body>

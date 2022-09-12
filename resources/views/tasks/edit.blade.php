@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <a href="/memos/{{ $memo->id }}">戻る</a>
+    <a href="/tasks/{{ $task->id }}">戻る</a>
     <h1>更新</h1>
     @if ($errors->any())
         <div class="error">
@@ -27,19 +27,19 @@
 
     <!-- 更新先はmemosのidにしないと増える
     php artisan rote:listで確認① -->
-    <form action="/memos/{{ $memo->id }}" method="post">
+    <form action="/tasks/{{ $memo->id }}" method="post">
         @csrf
         @method('PATCH')
         <p>
             <label for="title">タイトル</label>
             <br>
             <input type="text" name="title"
-                    value="{{ old('title', $memo->title) }}">
+                    value="{{ old('title', $task->title) }}">
         </p>
         <p>
             <label for="body">本文</label><br>
             <textarea name="body" class="body">
-                {{ old('body', $memo->body) }}
+                {{ old('body', $task->body) }}
             </textarea>
         </p>
 
