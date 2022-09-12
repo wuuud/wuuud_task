@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Facade\Ignition\Tabs\Tab;
-use Illuminate\Http\Request;
+//バリデーション後
+use App\Http\Requests\TaskRequest;
 
 class TaskController extends Controller
 {
@@ -32,13 +33,8 @@ class TaskController extends Controller
         // 今回不要。indexに記載。return view('tasks.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    //バリデーション後
+    public function store(TaskRequest $request)
     {
         // インスタンスの作成
         $task = new Task;
@@ -85,7 +81,7 @@ class TaskController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TaskRequest $request, $id)
     {
         // インスタンスの作成
         $task = Task::find($id);
