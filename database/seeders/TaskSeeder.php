@@ -21,8 +21,8 @@ class TaskSeeder extends Seeder
         // DB::table('tasks')->insert($task);
         // 一件だけinsertする
         DB::table('tasks')->insert([
-            'title' => 'テスト',
-            'body' => 'テスト用データです。',
+        'title' => 'PHP',
+        'body' => 'PHPは、Hypertext Preprocessorの略です。',
         ]);
 
     }

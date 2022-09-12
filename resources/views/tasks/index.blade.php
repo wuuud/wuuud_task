@@ -13,7 +13,7 @@
         <h1>タスク一覧</h1>
         {{-- register-groupはタイトルと削除ボタンが並列 --}}
         <div class="register-group"> 
-            <p>{{ $tasks->title }}</p>
+            <p>{{ $task->title }}</p>
                 <ul>
                 @foreach ($tasks as $task)
                 <!-- // リンク先をidで取得し名前で出力 -->
