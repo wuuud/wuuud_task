@@ -60,6 +60,8 @@
             <textarea name="body" class="body">{{ old('body') }}</textarea>
         </p>
 
+        {{-- <!-- 編集edit.balde.phpへジャンプする -->
+        <button onclick="location.href='/tasks/{task}/edit'">Create Task</button> --}}
         <input type="submit" value="Create Task">
     </form>
     </body>
