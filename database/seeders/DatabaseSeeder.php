@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // MemoSeeder（シーダークラス）の呼び出し
-        $this->call(TaskSeeder::class);
+        // // MemoSeeder（シーダークラス）の呼び出し
+        // $this->call(TaskSeeder::class);
     }
 }

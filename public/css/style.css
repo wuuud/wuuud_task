@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+docker stop $(docker ps -q)
+
+
 .body {
     width: 300px;
     height: 100px;
@@ -10,13 +13,56 @@
     display: flex;
 }
 
-
-
-.test{
-    border-top: 1px solid;
-}
-
-.button-group > *:not(:last-child) {
+.button-group>*:not(:last-child) {
     margin-right: 10px;
 }
 
+
+.test {
+    border-top: 1px solid;
+}
+
+
+.index_list {
+    display: flex;
+    margin: 0.5em 0px;
+}
+
+.index_list>*:not(:last-child) {
+    margin-right: 15px;
+}
+
+/* .container{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  /* margin: 0 auto;
+  justify-content: space-between;
+  
+  width: 100%; 
+} */
+
+/* .inner{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  margin: 5px;
+  align-items: center;
+  width: 100%;
+} */
+
+/* .inner_txt{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+/*  
+  margin: auto 0;
+  flex-basis: 64%;
+  border:solid 1px #f0f;
+  align-items: stretch;
+  width:100%; 
+} */
