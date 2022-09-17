@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-docker stop $(docker ps -q)
 
 
 .body {
@@ -32,37 +31,3 @@ docker stop $(docker ps -q)
     margin-right: 15px;
 }
 
-/* .container{
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-
-  /* margin: 0 auto;
-  justify-content: space-between;
-  
-  width: 100%; 
-} */
-
-/* .inner{
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-
-  margin: 5px;
-  align-items: center;
-  width: 100%;
-} */
-
-/* .inner_txt{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-/*  
-  margin: auto 0;
-  flex-basis: 64%;
-  border:solid 1px #f0f;
-  align-items: stretch;
-  width:100%; 
-} */
