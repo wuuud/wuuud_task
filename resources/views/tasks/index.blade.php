@@ -14,21 +14,17 @@
     <h1>タスク一覧</h1>
 
     @foreach ($tasks as $task)
-        {{-- <div class="container"> --}}
+        
         <div class=index_list>
-            {{-- <div class="inner"> --}}
             <a href="/tasks/{{ $task->id }}">{{ $task->title }}</a>
-            {{-- </div> --}}
-            {{-- <div class="inner_text"> --}}
             <form action="/tasks/{{ $task->id }}" method="post">
                 @csrf
                 @method('DELETE')
                 <input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};">
             </form>
         </div>
-        {{-- </div> --}}
+        
     @endforeach
-    {{-- </div> --}}
 
 
     {{-- ②新規論文投稿 --}}
